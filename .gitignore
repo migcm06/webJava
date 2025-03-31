@@ -1,0 +1,14 @@
+# Carpetas de configuración de Eclipse/NetBeans
+/.settings/
+/.classpath
+/.project
+/nbproject/
+/target/
+
+# Archivos de compilación
+*.class
+*.war
+*.jar
+
+# Dependencias
+/lib/
