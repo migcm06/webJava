@@ -51,7 +51,7 @@ public class UsuarioDAO {
         return lista;
     }
 
-    // MÉTODO PARA AGREGAR USUARIO
+    // AGREGAR USUARIO
     public void agregarUsuario(Usuario usuario) {
         Connection con = null;
         PreparedStatement ps = null;
