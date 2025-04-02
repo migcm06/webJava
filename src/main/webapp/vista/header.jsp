@@ -13,8 +13,45 @@
 
         <h1 class="h3">WEB REGISTRADORA DE USUARIOS</h1>
         <nav>
-            <a href="${pageContext.request.contextPath}/vista/registro.jsp" class="btn btn-light" style="width: 105%">Registrar</a>
-
+            <div class="text-end mb-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroModal">
+                    Registrar Usuario
+                </button>
+            </div>
         </nav>
+        <!-- Modal de Registro -->
+        <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registroModalLabel">Registrar Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="${pageContext.request.contextPath}/ServletControlador" method="POST">
+                            <div class="mb-3">
+                                <label for="documento" class="form-label text-success">Documento</label>
+                                <input type="text" class="form-control" id="documento" name="documento" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label text-success">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label text-success">Apellido</label>
+                                <input type="text" class="form-control" id="apellido" name="apellido" required />
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
